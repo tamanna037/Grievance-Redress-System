@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="HomePage" prefHeight="715.0" prefWidth="1357.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Authority.ServerHomePageController">
+   <children>
+      <TreeView fx:id="treeViewServer" fixedCellSize="0.0" layoutX="24.0" layoutY="95.0" prefHeight="590.0" prefWidth="161.0" />
+      <ButtonBar layoutX="6.0" layoutY="14.0" prefHeight="3.0" prefWidth="1342.0">
+         <buttons>
+            <ToggleButton fx:id="homeServerButton" mnemonicParsing="false" onAction="#homeServerButtonAction" prefHeight="25.0" prefWidth="755.0" text="Home">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font></ToggleButton>
+            <ToggleButton fx:id="usersButton" mnemonicParsing="false" onAction="#usersButtonAction" prefHeight="15.0" text="Users">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font></ToggleButton>
+            <ToggleButton fx:id="eliteUsersButton" mnemonicParsing="false" onAction="#eliteUsersButtonAction" text="Elite Users">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font></ToggleButton>
+         </buttons>
+      </ButtonBar>
+      <ListView fx:id="listViewServer" layoutX="1189.0" layoutY="95.0" prefHeight="590.0" prefWidth="161.0" />
+      <Label fx:id="onlineLabel" layoutX="1189.0" layoutY="67.0" prefHeight="27.0" prefWidth="161.0" text="      Online">
+         <font>
+            <Font name="Tahoma Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableViewHomeServer" layoutX="195.0" layoutY="118.0" prefHeight="566.0" prefWidth="982.0" />
+      <TableView fx:id="tableViewUsersServer" layoutX="199.0" layoutY="120.0" prefHeight="566.0" prefWidth="975.0" />
+      <TableView fx:id="tableViewTreeView" layoutX="201.0" layoutY="122.0" prefHeight="566.0" prefWidth="975.0" />
+      <TableView fx:id="tableViewEliteUsersServer" layoutX="201.0" layoutY="122.0" prefHeight="566.0" prefWidth="975.0" />
+   </children>
+</AnchorPane>

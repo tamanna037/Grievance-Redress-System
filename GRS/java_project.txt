@@ -1,0 +1,182 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : localhost_3306
+Source Server Version : 50546
+Source Host           : localhost:3306
+Source Database       : java_project
+
+Target Server Type    : MYSQL
+Target Server Version : 50546
+File Encoding         : 65001
+
+Date: 2015-12-23 17:33:17
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for `districtdata`
+-- ----------------------------
+DROP TABLE IF EXISTS `districtdata`;
+CREATE TABLE `districtdata` (
+  `village` varchar(20) NOT NULL,
+  `unionCouncil` varchar(20) NOT NULL,
+  `unionCouncilCode` varchar(2) NOT NULL,
+  `upazilla` varchar(20) NOT NULL,
+  `upazillaCode` varchar(2) NOT NULL,
+  `districtCode` varchar(2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of districtdata
+-- ----------------------------
+INSERT INTO `districtdata` VALUES ('tamapara', 'kushumhati', '01', 'naydanga', '01', '01');
+INSERT INTO `districtdata` VALUES ('farihati', 'kushumhati', '01', 'naydanga', '01', '01');
+INSERT INTO `districtdata` VALUES ('labonigonj', 'taltola', '02', 'naydanga', '01', '01');
+INSERT INTO `districtdata` VALUES ('samiapara', 'paharpur', '02', 'rajnagar', '02', '01');
+
+-- ----------------------------
+-- Table structure for `eliteusers`
+-- ----------------------------
+DROP TABLE IF EXISTS `eliteusers`;
+CREATE TABLE `eliteusers` (
+  `NID` varchar(17) NOT NULL,
+  `userName` varchar(20) NOT NULL,
+  `password` varchar(40) DEFAULT NULL,
+  `designation` varchar(20) NOT NULL,
+  `workingArea` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`NID`),
+  UNIQUE KEY `unique_userName` (`userName`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of eliteusers
+-- ----------------------------
+INSERT INTO `eliteusers` VALUES ('19950110101305001', 'okko', 'okkookko', 'chairman', 'kusumati');
+INSERT INTO `eliteusers` VALUES ('19950110101305015', 'shimul', 'shimul', 'uno', 'naydanga');
+INSERT INTO `eliteusers` VALUES ('19950110101305035', 'mim', 'mimmim', 'member', 'samiapara');
+INSERT INTO `eliteusers` VALUES ('19950110101305043', 'numan', 'numan', 'member', 'farihati');
+INSERT INTO `eliteusers` VALUES ('19950110101305047', 'sifat', 'sifat', 'uno', 'rajnagar');
+INSERT INTO `eliteusers` VALUES ('19950110101305051', 'tonmoy', 'tonmoy', 'chairman', 'paharpur');
+INSERT INTO `eliteusers` VALUES ('19950110101305089', 'trishna', 'trishna', 'chairman', 'taltola');
+INSERT INTO `eliteusers` VALUES ('19950110101305107', 'sinha', 'sinha', 'deputy commissioner', 'Comilla');
+INSERT INTO `eliteusers` VALUES ('19950110101305113', 'ridi', 'ridiridi', 'member', 'tamapara');
+
+-- ----------------------------
+-- Table structure for `nidandname`
+-- ----------------------------
+DROP TABLE IF EXISTS `nidandname`;
+CREATE TABLE `nidandname` (
+  `NID` varchar(17) NOT NULL,
+  `name` varchar(40) NOT NULL,
+  PRIMARY KEY (`NID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of nidandname
+-- ----------------------------
+INSERT INTO `nidandname` VALUES ('12345678901234567', 'friha');
+INSERT INTO `nidandname` VALUES ('19950110101305001', 'okko');
+INSERT INTO `nidandname` VALUES ('19950110101305002', 'sakkhor');
+INSERT INTO `nidandname` VALUES ('19950110101305005', 'choton');
+INSERT INTO `nidandname` VALUES ('19950110101305007', 'fariha');
+INSERT INTO `nidandname` VALUES ('19950110101305015', 'shimul');
+INSERT INTO `nidandname` VALUES ('19950110101305017', 'rajesh');
+INSERT INTO `nidandname` VALUES ('19950110101305029', 'holder');
+INSERT INTO `nidandname` VALUES ('19950110101305037', 'tama');
+INSERT INTO `nidandname` VALUES ('19950110101305041', 'seeum');
+INSERT INTO `nidandname` VALUES ('19950110101305045', 'mahathir');
+INSERT INTO `nidandname` VALUES ('19950110101305047', 'kagu');
+INSERT INTO `nidandname` VALUES ('19950110101305051', 'tonmoy');
+INSERT INTO `nidandname` VALUES ('19950110101305057', 'sakib');
+INSERT INTO `nidandname` VALUES ('19950110101305059', 'tashaffi');
+INSERT INTO `nidandname` VALUES ('19950110101305077', 'emon');
+INSERT INTO `nidandname` VALUES ('19950110101305081', 'pavel');
+INSERT INTO `nidandname` VALUES ('19950110101305087', 'sojal');
+INSERT INTO `nidandname` VALUES ('19950110101305089', 'tinker');
+INSERT INTO `nidandname` VALUES ('19950110101305105', 'samia');
+INSERT INTO `nidandname` VALUES ('19950110101305115', 'laboni');
+INSERT INTO `nidandname` VALUES ('19950110101305119', 'beka');
+INSERT INTO `nidandname` VALUES ('19950110101560719', 'rhythm');
+
+-- ----------------------------
+-- Table structure for `problems`
+-- ----------------------------
+DROP TABLE IF EXISTS `problems`;
+CREATE TABLE `problems` (
+  `type` varchar(20) NOT NULL,
+  `summary` varchar(100) NOT NULL,
+  `description` varchar(300) DEFAULT NULL,
+  `postedby` varchar(20) NOT NULL,
+  `postedOn` datetime NOT NULL,
+  `status` varchar(20) DEFAULT NULL,
+  `scope` varchar(20) DEFAULT NULL,
+  `vote` int(11) NOT NULL,
+  `problemNo` int(11) NOT NULL,
+  `votedBy` varchar(8000) DEFAULT NULL,
+  `filePath` varchar(2000) DEFAULT NULL,
+  PRIMARY KEY (`problemNo`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of problems
+-- ----------------------------
+INSERT INTO `problems` VALUES ('Road and Highway', 'manholer dhakna', 'manhole pore gechi. amare tulen', 'pavel', '2014-05-11 16:03:39', 'pending', 'village', '3', '1', 'raihan,choton,samia', '');
+INSERT INTO `problems` VALUES ('Water', 'pani nai', 'gosul korte dhukchi , pani chole geche. pani den', 'raihan', '2014-05-11 16:03:39', 'pending', 'village', '0', '2', '', '');
+INSERT INTO `problems` VALUES ('Road and Highway', 'patthor', 'rastay patthor. juta chire jay', 'samia', '2014-05-11 16:03:39', 'pending', 'district', '2', '3', 'laboni,samia', '');
+INSERT INTO `problems` VALUES ('Electricity', 'current', 'current nai.make up korte partechi na', 'tashaffi', '2015-06-09 16:03:33', 'pending', 'upajilla', '0', '4', '', '');
+INSERT INTO `problems` VALUES ('Education', 'cg', 'amk orker meye version hisebe shikriti deya hok', 'laboni', '2014-05-11 16:03:39', 'pending', 'village', '2', '5', 'tamanna,sojal', '');
+INSERT INTO `problems` VALUES ('Health', 'surir baka', 'amar surir din din suja hye jacche .ami kivabe eke bakiye rakhte pari.. ', 'xahid', '2015-12-05 15:57:04', 'working', 'village', '1', '6', 'xahid', '');
+INSERT INTO `problems` VALUES ('Gas', 'pete gas', 'amr pete onk gas hoiche. eto gas diye ami ki korbo?', 'emon', '2014-05-11 16:03:39', 'working', 'district', '1', '7', 'laboni', '');
+INSERT INTO `problems` VALUES ('Others', 'chul', 'chul pore jay. ', 'samia', '2014-05-11 16:03:39', 'pending', 'unionCouncil', '1', '8', 'samia', '');
+INSERT INTO `problems` VALUES ('Health', 'treat chai', 'shukaya gechi. treat chai', 'sojal', '2014-05-11 16:03:39', 'pending', 'upajilla', '0', '9', '', '');
+INSERT INTO `problems` VALUES ('Health', 'MOTA HOYE JACCHI', 'mota hoye gesi...khabare extra fat deya hocche ken??ami ekhon ki khabo??  hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh', 'samia', '2014-05-11 16:03:39', 'pending', 'unionCouncil', '0', '10', '', '');
+INSERT INTO `problems` VALUES ('Natural Disaster', 'rode', 'baire rode.ga pure jay. chata futaite partechi na', 'tamanna', '2014-05-11 16:03:39', 'pending', 'village', '2', '11', 'tamanna,samia', '');
+INSERT INTO `problems` VALUES ('Water', 'flood', 'water water everywhere', 'xahid', '2015-12-05 16:22:45', 'pending', 'unionCouncil', '1', '12', 'pavel', '');
+INSERT INTO `problems` VALUES ('Others', 'ukun', 'mathay ukun. dokane english shampoo nai ', 'samia', '2015-12-06 09:35:59', 'pending', 'upajilla', '0', '13', '', '');
+INSERT INTO `problems` VALUES ('Gas', 'ranna', 'gas nai.ranna kivabe korbo?', 'samia', '2015-12-10 12:27:48', 'working', 'District', '2', '14', 'emon,samia', '');
+INSERT INTO `problems` VALUES ('Social Security', 'alien!!!', 'amar sopne alien hana dey. ami ekhn ki korbo? :\'(', 'sojal', '2015-12-10 16:51:02', 'completed', 'District', '1', '15', 'laboni', '');
+INSERT INTO `problems` VALUES ('Road and Highway', 'accident', 'nirapod shorok chai', 'laboni', '2015-12-21 04:07:10', 'pending', 'Village', '2', '16', 'laboni,rajesh', null);
+INSERT INTO `problems` VALUES ('Road and Highway', 'kjkj', 'uu', 'samia', '2015-12-21 10:24:04', 'pending', 'Village', '1', '17', 'samia', null);
+INSERT INTO `problems` VALUES ('Road and Highway', 'qqqqqqqqqqqqqq', 'qqqqqqqqqqqqqqqqqqqqqqqqqerrewrerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr', 'samia', '2015-12-21 10:28:42', 'pending', 'Village', '1', '18', 'samia', null);
+INSERT INTO `problems` VALUES ('Road and Highway', 'hh', 'ffgffgfgfg\nkkjkj\njjkjk\nn\n', 'samia', '2015-12-22 07:47:51', 'pending', 'Village', '1', '19', 'samia', null);
+INSERT INTO `problems` VALUES ('Road and Highway', 'ff', 'r', 'samia', '2015-12-22 10:45:48', 'pending', 'Village', '1', '20', 'samia', null);
+INSERT INTO `problems` VALUES ('Road and Highway', 'jhjhj', '   jhj', 'sojal', '2015-12-22 10:46:20', 'pending', 'Village', '1', '21', 'sojal', null);
+INSERT INTO `problems` VALUES ('Others', 'kdkjd', 'jjjk', 'samia', '2015-12-22 17:36:32', 'pending', 'Village', '1', '22', 'samia', null);
+INSERT INTO `problems` VALUES ('Education', 'xcx', 'xmzmx,z', 'rajesh', '2015-12-22 18:47:35', 'pending', 'Upajilla', '0', '23', '', null);
+INSERT INTO `problems` VALUES ('Road and Highway', 'xxx', 'x', 'samia', '2015-12-22 18:48:26', 'pending', 'Village', '1', '24', 'samia', null);
+INSERT INTO `problems` VALUES ('Health', 'pimple hocche', 'my skin needs to realize um nt a teenager', 'mahathir', '2015-12-23 11:29:19', 'pending', 'Village', '0', '25', '', null);
+INSERT INTO `problems` VALUES ('Road and Highway', 'g', 'ghg', 'samia', '2015-12-23 13:54:05', 'pending', 'Village', '0', '26', '', null);
+INSERT INTO `problems` VALUES ('Road and Highway', 'h', 'hj', 'xahid', '2015-12-23 14:00:47', 'pending', 'Village', '0', '27', '', null);
+INSERT INTO `problems` VALUES ('Road and Highway', 'jdfkjalksdfjljdflkajk', 'jkelkalsdjgkajdsgkgn  dgasllka', 'samia', '2015-12-23 14:53:47', 'pending', 'Village', '0', '28', '', null);
+INSERT INTO `problems` VALUES ('Road and Highway', 'kmk', 'mn', 'samia', '2015-12-23 15:00:34', 'pending', 'Village', '0', '29', '', null);
+INSERT INTO `problems` VALUES ('Road and Highway', 'now hrjhnoe ', 'djkhasjdfjk', 'samia', '2015-12-23 15:12:57', 'pending', 'Village', '0', '30', '', 'C:\\Stored Data From Client\\F:\\ser - Copy.PNG');
+
+-- ----------------------------
+-- Table structure for `users`
+-- ----------------------------
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users` (
+  `NID` varchar(17) NOT NULL,
+  `userName` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `village` varchar(20) NOT NULL,
+  PRIMARY KEY (`NID`),
+  UNIQUE KEY `unique_userName` (`userName`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of users
+-- ----------------------------
+INSERT INTO `users` VALUES ('19950110101305005', 'choton', 'choton', 'labonigonj');
+INSERT INTO `users` VALUES ('19950110101305017', 'rajesh', 'rajesh', 'farihati');
+INSERT INTO `users` VALUES ('19950110101305037', 'tamanna', 'tamanna', 'tamapara');
+INSERT INTO `users` VALUES ('19950110101305045', 'mahathir', 'mahathir', 'farihati');
+INSERT INTO `users` VALUES ('19950110101305057', 'sakib', 'sakib', 'farihati');
+INSERT INTO `users` VALUES ('19950110101305077', 'emon', 'emonemon', 'farihati');
+INSERT INTO `users` VALUES ('19950110101305081', 'pavel', 'pavel', 'tamapara');
+INSERT INTO `users` VALUES ('19950110101305087', 'sojal', 'sojal', 'farihati');
+INSERT INTO `users` VALUES ('19950110101305105', 'samia', 'samia', 'tamapara');
+INSERT INTO `users` VALUES ('19950110101305115', 'laboni', 'laboni', 'farihati');
+INSERT INTO `users` VALUES ('19950110101305119', 'xahid', 'xahid', 'samiapara');

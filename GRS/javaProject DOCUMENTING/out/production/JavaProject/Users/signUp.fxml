@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="usernameLabel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="716.0" prefWidth="1377.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Users.SignUpController">
+   <children>
+      <Button fx:id="createAnAccount" layoutX="337.0" layoutY="602.0" mnemonicParsing="false" onAction="#createAnAccountAction" text="Create An Account">
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="retypePasswordLabelSignUp" layoutX="114.0" layoutY="367.0" prefHeight="23.0" prefWidth="229.0" text="Retype Password">
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="retypePasswordSignUp" layoutX="114.0" layoutY="396.0" prefHeight="35.0" prefWidth="251.0">
+         <font>
+            <Font name="Tahoma" size="12.0" />
+         </font>
+      </PasswordField>
+      <TextField fx:id="usernameSignUp" layoutX="114.0" layoutY="199.0" prefHeight="35.0" prefWidth="251.0">
+         <font>
+            <Font name="Tahoma" size="12.0" />
+         </font>
+         <tooltip>
+            <Tooltip fx:id="usernameSignUpTooltip" text="This Will be Your Username" />
+         </tooltip>
+      </TextField>
+      <Label fx:id="usernameLabelSignUp" layoutX="115.0" layoutY="166.0" prefHeight="23.0" prefWidth="229.0" text="Username">
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="passwordLabelSignUp" layoutX="115.0" layoutY="260.0" prefHeight="23.0" prefWidth="229.0" text="Password">
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="passwordSignUp" layoutX="114.0" layoutY="294.0" prefHeight="35.0" prefWidth="251.0">
+         <font>
+            <Font name="Tahoma" size="12.0" />
+         </font>
+         <tooltip>
+            <Tooltip fx:id="passwordSignUpTooltip" text="Use at least one lowercase letter, one numeral, and seven characters." />
+         </tooltip>
+      </PasswordField>
+      <TextField fx:id="nidNumberSignUp" layoutX="114.0" layoutY="106.0" prefHeight="35.0" prefWidth="251.0">
+         <font>
+            <Font name="Tahoma" size="12.0" />
+         </font>
+         <tooltip>
+            <Tooltip fx:id="nidNumberSignUpTooltip" text="Give Your National Identy Number" />
+         </tooltip>
+      </TextField>
+      <Label fx:id="nidNumberLabelSignUp" layoutX="114.0" layoutY="76.0" prefHeight="23.0" prefWidth="229.0" text="NID Number">
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="nidMsg" layoutX="118.0" layoutY="133.0" />
+      <Label fx:id="usenameMsg" layoutX="53.0" layoutY="169.0" />
+      <ButtonBar layoutX="1076.0" layoutY="34.0" prefHeight="40.0" prefWidth="229.0">
+         <buttons>
+            <ToggleButton fx:id="signUpAtSignUp" mnemonicParsing="false" onAction="#signUpAtSignUpAction" text="Sign Up">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton fx:id="signInAtSignUp" mnemonicParsing="false" onAction="#signInAtSignUpAction" prefHeight="35.0" prefWidth="100.0" text="Sign In">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font>
+            </ToggleButton>
+         </buttons>
+      </ButtonBar>
+      <ToggleButton fx:id="backButton" layoutX="1205.0" layoutY="88.0" mnemonicParsing="false" onAction="#backButtonAction" prefHeight="35.0" prefWidth="100.0" text="Back">
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+      </ToggleButton>
+      <Label fx:id="villageLabelSignUp" layoutX="118.0" layoutY="468.0" prefHeight="23.0" prefWidth="229.0" text="Village">
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="villageSignUp" layoutX="114.0" layoutY="501.0" prefHeight="35.0" prefWidth="251.0" />
+      <Button fx:id="submitChanges" layoutX="118.0" layoutY="602.0" mnemonicParsing="false" onAction="#submitChangesAction" text="Submit Changes">
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteAccount" layoutX="603.0" layoutY="106.0" mnemonicParsing="false" text="Delete Account">
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

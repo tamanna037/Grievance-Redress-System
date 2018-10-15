@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="HomePage" prefHeight="716.0" prefWidth="1377.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Users.UserHomePageController">
+   <children>
+      <TreeView fx:id="treeView" fixedCellSize="0.0" layoutX="35.0" layoutY="71.0" prefHeight="622.0" prefWidth="143.0" />
+      <Label fx:id="homePageLabel" layoutX="204.0" layoutY="71.0" prefHeight="30.0" prefWidth="537.0" text="Select From Below and Make Your Complain">
+         <font>
+            <Font name="Tahoma Bold" size="24.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="11.0" layoutY="7.0" prefHeight="40.0" prefWidth="1344.0">
+        <buttons>
+            <ToggleButton fx:id="homeUserButton" mnemonicParsing="false" onAction="#HomeButtonAction" prefHeight="25.0" prefWidth="300.0" text="Home">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font></ToggleButton>
+            <ToggleButton fx:id="profileButton" mnemonicParsing="false" onAction="#profileButtonAction" text="Profile">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font></ToggleButton>
+            <ToggleButton fx:id="historyButton" mnemonicParsing="false" onAction="#historyButtonAction" text="My History">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font></ToggleButton>
+            <ToggleButton fx:id="myVillageButton" mnemonicParsing="false" onAction="#myVillageButtonAction" text="My Village">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font></ToggleButton>
+            <ToggleButton fx:id="settingsButton" mnemonicParsing="false" onAction="#settingsButtonAction" text="Settings">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font></ToggleButton>
+            <ToggleButton fx:id="logoutButton" mnemonicParsing="false" onAction="#logoutButtonAction" prefHeight="25.0" text="Logout">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font></ToggleButton>
+        </buttons>
+      </ButtonBar>
+      <ButtonBar fx:id="villageButtonBar" layoutX="1082.0" layoutY="66.0" prefHeight="40.0" prefWidth="273.0">
+        <buttons>
+            <ToggleButton fx:id="successStoriesButton" mnemonicParsing="false" onAction="#successStoriesButtonAction" text="Success Story">
+               <font>
+                  <Font name="Tahoma Bold" size="14.0" />
+               </font></ToggleButton>
+            <ToggleButton fx:id="statisticsButton" minWidth="48.0" mnemonicParsing="false" onAction="#statisticsButtonAction" prefHeight="25.0" text="Statistics">
+               <font>
+                  <Font name="Tahoma Bold" size="14.0" />
+               </font></ToggleButton>
+        </buttons>
+      </ButtonBar>
+      <TableView fx:id="othersTableView" layoutX="195.0" layoutY="114.0" prefHeight="578.0" prefWidth="1128.0" />
+      <Button fx:id="saveButton" layoutX="1220.0" layoutY="636.0" mnemonicParsing="false" onAction="#saveButtonAction" prefHeight="40.0" prefWidth="90.0" text="Save" />
+      <TextArea fx:id="homeTextArea" layoutX="195.0" layoutY="195.0" prefHeight="430.0" prefWidth="1116.0" promptText="Write Your complain ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextArea>
+      <ChoiceBox fx:id="problemTypeChoiceBox" layoutX="206.0" layoutY="120.0" prefWidth="150.0" />
+      <TextField fx:id="complainSummaryTextField" layoutX="204.0" layoutY="156.0" prefHeight="25.0" prefWidth="1107.0" promptText="Write a summary or specification of your complain" />
+      <ChoiceBox fx:id="problemScopeChoiceBox" layoutX="372.0" layoutY="120.0" prefWidth="150.0" />
+      <TableView fx:id="tableView" layoutX="199.0" layoutY="112.0" prefHeight="578.0" prefWidth="1128.0" />
+      <TextArea fx:id="historyTextArea" layoutX="197.0" layoutY="148.0" prefHeight="543.0" prefWidth="1116.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="profileTextArea" layoutX="198.0" layoutY="147.0" prefHeight="543.0" prefWidth="1116.0" promptText="Write Your complain ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextArea>
+      <TextField fx:id="filePath" layoutX="876.0" layoutY="120.0" prefHeight="25.0" prefWidth="435.0" promptText="You can upload a file less than 25 MB">
+         <font>
+            <Font name="Tahoma" size="12.0" />
+         </font></TextField>
+      <ToggleButton fx:id="uploadFile" layoutX="800.0" layoutY="120.0" mnemonicParsing="false" onAction="#uploadFileAction" text="Upload">
+         <font>
+            <Font name="Tahoma" size="13.0" />
+         </font>
+      </ToggleButton>
+      <TableView fx:id="eliteUsersTableView" layoutX="197.0" layoutY="114.0" prefHeight="586.0" prefWidth="1135.0" />
+   </children>
+</AnchorPane>

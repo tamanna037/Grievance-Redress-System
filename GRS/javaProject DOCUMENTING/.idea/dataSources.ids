@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - @localhost [2]" uuid="89577961-5826-4e13-bcc3-2c9f659e06d2">
+    <database-info product="MySQL" version="5.5.46" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.34 ( Revision: jess.balint@oracle.com-20141014163213-wqbwpf1ok2kvo1om )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="java_newnewproject"/>
+    <schema name="" catalog="java_newproject"/>
+    <schema name="" catalog="java_project"/>
+    <table name="districtdata" schema="" catalog="java_newnewproject" type="TABLE">
+      <column name="village" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="unionCouncil" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="upazilla" sqlType="VARCHAR" precision="2" scale="0" nullable="false" jdbcType="12"/>
+      <column name="upazillaCode" sqlType="VARCHAR" precision="2" scale="0" nullable="false" jdbcType="12"/>
+      <column name="districtCode" sqlType="VARCHAR" precision="2" scale="0" nullable="false" jdbcType="12"/>
+    </table>
+    <table name="eliteusers" schema="" catalog="java_newnewproject" type="TABLE">
+      <column name="NID" sqlType="VARCHAR" precision="17" scale="0" nullable="false" jdbcType="12"/>
+      <column name="userName" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12"/>
+      <column name="designation" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="workingArea" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="NID"/>
+    </table>
+    <table name="nidandname" schema="" catalog="java_newnewproject" type="TABLE">
+      <column name="NID" sqlType="VARCHAR" precision="17" scale="0" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="NID"/>
+    </table>
+    <table name="problems" schema="" catalog="java_newnewproject" type="TABLE">
+      <column name="type" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="summary" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="4000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="postedby" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="status" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="scope" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="vote" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="votedBy" sqlType="VARCHAR" precision="2000" scale="0" nullable="false" jdbcType="12"/>
+    </table>
+    <table name="districtdata" schema="" catalog="java_newproject" type="TABLE">
+      <column name="village" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="unionCouncil" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="upazilla" sqlType="VARCHAR" precision="2" scale="0" nullable="false" jdbcType="12"/>
+      <column name="upazillaCode" sqlType="VARCHAR" precision="2" scale="0" nullable="false" jdbcType="12"/>
+      <column name="districtCode" sqlType="VARCHAR" precision="2" scale="0" nullable="false" jdbcType="12"/>
+    </table>
+    <table name="eliteusers" schema="" catalog="java_newproject" type="TABLE">
+      <column name="NID" sqlType="VARCHAR" precision="17" scale="0" nullable="false" jdbcType="12"/>
+      <column name="userName" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12"/>
+      <column name="designation" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="workingArea" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="NID"/>
+      <index name="userName" unique="true" columns="userName"/>
+    </table>
+    <table name="nidandname" schema="" catalog="java_newproject" type="TABLE">
+      <column name="NID" sqlType="VARCHAR" precision="17" scale="0" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="NID"/>
+    </table>
+    <table name="prob" schema="" catalog="java_newproject" type="TABLE">
+      <column name="type" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="summary" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="4000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="postedby" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="postedOn" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="status" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="scope" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="vote" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="problemNo" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="votedBy" sqlType="VARCHAR" precision="2000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="filePath" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="problemNo"/>
+    </table>
+    <table name="problems2" schema="" catalog="java_newproject" type="TABLE">
+      <column name="type" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="summary" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="4000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="postedby" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="status" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="scope" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="vote" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="problemNo" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="votedBy" sqlType="VARCHAR" precision="2000" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="problemNo"/>
+    </table>
+    <table name="problems3" schema="" catalog="java_newproject" type="TABLE">
+      <column name="type" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="summary" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="4000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="postedby" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="status" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="scope" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="vote" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="problemNo" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="votedBy" sqlType="VARCHAR" precision="2000" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="problemNo"/>
+    </table>
+    <table name="problems4" schema="" catalog="java_newproject" type="TABLE">
+      <column name="type" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="summary" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="4000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="postedby" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="status" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="scope" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="vote" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="problemNo" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="votedBy" sqlType="VARCHAR" precision="2000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="filePath" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="problemNo"/>
+    </table>
+    <table name="problems6" schema="" catalog="java_newproject" type="TABLE">
+      <column name="type" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="summary" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="4000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="postedby" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="postedOn" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="status" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="scope" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="vote" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="problemNo" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="votedBy" sqlType="VARCHAR" precision="2000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="filePath" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="problemNo"/>
+    </table>
+    <table name="tama" schema="" catalog="java_newproject" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="first" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="last" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="age" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="districtdata" schema="" catalog="java_project" type="TABLE">
+      <column name="village" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="unionCouncil" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="unionCouncilCode" sqlType="VARCHAR" precision="2" scale="0" nullable="false" jdbcType="12"/>
+      <column name="upazilla" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="upazillaCode" sqlType="VARCHAR" precision="2" scale="0" nullable="false" jdbcType="12"/>
+      <column name="districtCode" sqlType="VARCHAR" precision="2" scale="0" nullable="false" jdbcType="12"/>
+    </table>
+    <table name="eliteusers" schema="" catalog="java_project" type="TABLE">
+      <column name="NID" sqlType="VARCHAR" precision="17" scale="0" nullable="false" jdbcType="12"/>
+      <column name="userName" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="40" scale="0" nullable="true" jdbcType="12"/>
+      <column name="designation" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="workingArea" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="NID"/>
+      <index name="unique_userName" unique="true" columns="userName"/>
+    </table>
+    <table name="nidandname" schema="" catalog="java_project" type="TABLE">
+      <column name="NID" sqlType="VARCHAR" precision="17" scale="0" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="NID"/>
+    </table>
+    <table name="problems" schema="" catalog="java_project" type="TABLE">
+      <column name="type" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="summary" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="300" scale="0" nullable="true" jdbcType="12"/>
+      <column name="postedby" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="postedOn" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="status" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="scope" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="vote" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="problemNo" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="votedBy" sqlType="VARCHAR" precision="8000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="filePath" sqlType="VARCHAR" precision="2000" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="problemNo"/>
+    </table>
+    <table name="users" schema="" catalog="java_project" type="TABLE">
+      <column name="NID" sqlType="VARCHAR" precision="17" scale="0" nullable="false" jdbcType="12"/>
+      <column name="userName" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="village" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="NID"/>
+      <index name="unique_userName" unique="true" columns="userName"/>
+    </table>
+  </data-source>
+</component>

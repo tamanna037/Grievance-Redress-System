@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - @localhost [2]" uuid="89577961-5826-4e13-bcc3-2c9f659e06d2">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>java_newnewproject.* java_newproject.* java_project.*</schema-pattern>
+      <default-schemas>java_newnewproject.* java_newproject.* java_project.*</default-schemas>
+    </data-source>
+  </component>
+</project>

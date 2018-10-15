@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorPaneSignIn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="716.0" prefWidth="1377.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Users.SignInController">
+   <children>
+      <ButtonBar layoutX="1083.0" layoutY="40.0" prefHeight="40.0" prefWidth="233.0">
+         <buttons>
+            <ToggleButton fx:id="signUpAtSignIn" mnemonicParsing="false" onAction="#signUpAtSignInAction" prefHeight="35.0" prefWidth="108.0" text="Sign Up">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton fx:id="signInAtSignIn" mnemonicParsing="false" onAction="#signInAtSignInAction" text="Sign In">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font>
+            </ToggleButton>
+         </buttons>
+      </ButtonBar>
+      <TextField fx:id="usernameSignIn" layoutX="509.0" layoutY="200.0" prefHeight="40.0" prefWidth="233.0">
+         <font>
+            <Font name="Tahoma" size="12.0" />
+         </font>
+      </TextField>
+      <Label fx:id="usenameLabelSignIn" layoutX="507.0" layoutY="162.0" prefHeight="30.0" prefWidth="134.0" text="Username">
+         <font>
+            <Font name="Tahoma Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="passwordLabelSignIn" layoutX="507.0" layoutY="268.0" prefHeight="30.0" prefWidth="134.0" text="Password">
+         <font>
+            <Font name="Tahoma Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="submit" layoutX="584.0" layoutY="463.0" mnemonicParsing="false" onAction="#submitAction" text="Submit">
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="passwordSignIn" layoutX="510.0" layoutY="307.0" prefHeight="40.0" prefWidth="233.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,43 @@
+
+.root
+{
+    -fx-background-image: url("../Images/victory.jpg");
+
+
+}
+.button
+{
+    -fx-background-color: yellow;
+}
+.toggle-button
+{
+    -fx-background-color: yellowgreen;
+}
+.text-area {
+// -fx-background-color: cornflowerblue;
+    -fx-background-color: black;
+
+}
+.text-field
+{
+
+// -fx-background-color: black;
+}
+
+.tree-view
+{
+//-fx-background-color: black;
+}
+
+.tree-cell
+{
+//-fx-background-color:greenyellow;
+}
+
+.label
+{
+    -fx-background-color: yellowgreen;
+// -fx-background-color: red;
+
+
+}
